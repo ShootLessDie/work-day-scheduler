@@ -2,16 +2,17 @@
 let currentDay = $("#currentDay")
 let timeTable = $("#timeTable")
 let time = moment().format("H")
-let storedData = []
+let storedData = {}
 
 /* Print current date */
 currentDay.text(moment().format("dddd, MMMM, Do, YYYY"))
 
 function readData(){
-    /* Read data from local storage */
-    storedData = JSON.parse(localStorage.getItem("dataStore"))
+    if (JSON.parse(localStorage.getItem("dataStore") != null)){
+        /* Read data from local storage */
+        storedData = JSON.parse(localStorage.getItem("dataStore"))
+    }
 }
-
 // Reads data from localstorage
 readData()
 

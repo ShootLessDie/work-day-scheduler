@@ -9,7 +9,9 @@ The deployed application can be accessed on : https://shootlessdie.github.io/wor
 
 
 And it looks like this.
-![Screenshot of web application] (./Screenshot from 2023-01-30 10-20-16.png)
+<p>
+    <img alt= "Screenshot of web application" src="./Screenshot.jpg"/>
+</p>
     
 
 ## License

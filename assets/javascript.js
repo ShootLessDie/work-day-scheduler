@@ -27,7 +27,13 @@ let saveButtonIcon = $("<i>")
 /* Attribute/class definitions for variables */
 row.attr("class", "row")
 hourItem.text(hour).attr("class", "col-md-2 hour")
-inputField.attr("class", "textarea").attr("class", "col-md-8").attr("id", hour).attr("value", storedData[hour])
+inputField.attr("class", "textarea").attr("class", "col-md-8").attr("id", hour)
+/* Error handling when storedData is empty */
+try{
+    inputField.attr("value", storedData[hour])
+}
+catch{}
+
 saveButton.attr("class", "saveBtn col-md-2 fa fa-save").attr("id", hour)
 saveButtonIcon.attr("class", "fa").attr("style", "font-size:48px").text("&#xf0c7;")
 
